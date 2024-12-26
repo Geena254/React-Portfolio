@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #1f1f38;
+    --bg-color-variant: #2c2c6c;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --primary-color: #4db5ff;
+    --primary-color-variant: rgba(77, 181, 255, 0.5);
+    --color-light: rgba(255, 255, 255, 0.5);
+    --color-white: #fff;
+
+    --transitionl: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--color-white);
+    line-height: 1.6;
+    background-image: url(../src/assets/bg-texture.png);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+section{
+    margin-top: 8rem;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+    color: var(--color-white);
+}
+
+section > h2 {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+.text-light {
+    color: var(--color-light);
+}
+
+a {
+    color: var(--primary-color);
+    transition: var(--transitionl);
+}
+
+a.hover {
+    color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    display: inline;
+    color: var(--primary-color);
+    padding: 0.6rem 1.0rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    transition: var(--transitionl);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--bg-color);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--color-bg);
+}
+
+img {
+    display: flex;
+    width: 10%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+/* ================= MEDIA QUERIES (MEDIUM DEVICES) ================= */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/* ================= MEDIA QUERIES (SMALL DEVICES) ================= */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+    section {
+        margin-top: 2rem;
+    }
+}
